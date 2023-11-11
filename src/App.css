@@ -1,0 +1,78 @@
+* {
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+
+.gallery-container {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-auto-rows: 270px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  animation: imageEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  transition-delay: 100ms;
+}
+
+@media screen and (min-width: 600px) {
+  .img-wide {
+    grid-column: span 2 / auto;
+  }
+  .img-tall {
+    grid-row: span 2 / auto;
+  }
+}
+.image:nth-child(1) {
+  animation-delay: 100ms;
+}
+.image:nth-child(2) {
+  animation-delay: 200ms;
+}
+.image:nth-child(3) {
+  animation-delay: 300ms;
+}
+.image:nth-child(4) {
+  animation-delay: 400ms;
+}
+.image:nth-child(5) {
+  animation-delay: 500ms;
+}
+.image:nth-child(6) {
+  animation-delay: 600ms;
+}
+.image:nth-child(7) {
+  animation-delay: 700ms;
+}
+.image:nth-child(8) {
+  animation-delay: 800ms;
+}
+.image:nth-child(9) {
+  animation-delay: 900ms;
+}
+.image:nth-child(10) {
+  animation-delay: 1000ms;
+}
+.image:nth-child(11) {
+  animation-delay: 1100ms;
+}
+.image:nth-child(12) {
+  animation-delay: 1200ms;
+}
+
+@keyframes imageEntrance {
+  from {
+    opacity: 0; 
+    transform: rotateZ(180deg) scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(0deg) scale(1);
+    filter: hue-rotate(0deg);
+    }
+}
